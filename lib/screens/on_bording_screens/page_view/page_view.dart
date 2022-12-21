@@ -1,4 +1,3 @@
-
 import 'package:codes/screens/on_bording_screens/page_view/widget/cus_appBar_onBording.dart';
 import 'package:codes/screens/on_bording_screens/page_view/widget/cust_button_onBording.dart';
 import 'package:codes/screens/on_bording_screens/page_view/widget/det_txt_onBording.dart';
@@ -48,12 +47,12 @@ class _MPageViewState extends State<MPageView> {
       body: Column(
         children: [
           ImageInOnBording(controller: _controller, data: _data),
-          const SizedBox(height: 38),
+          const SizedBox(height: 30),
           MainTxtOnBording(data: _data, index: _index),
           DetTxtOnBording(data: _data, index: _index),
           const SizedBox(height: 40),
           CustButtonOnBording(index: _index, controller: _controller),
-          const SizedBox(height: 110)
+          const SizedBox(height: 90)
         ],
       ),
     );
