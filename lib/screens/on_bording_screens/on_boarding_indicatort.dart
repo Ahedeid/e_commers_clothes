@@ -12,7 +12,7 @@ final bool visable ;
       visible: visable,
       child: Icon(
         Icons.arrow_forward_ios,
-        color: selected? Colors.white : Colors.grey,
+        color: selected? Colors.white : const Color.fromRGBO(255, 255, 255, 0.5),
         size: 19,
 
       ),

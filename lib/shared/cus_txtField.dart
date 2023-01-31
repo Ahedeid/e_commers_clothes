@@ -7,8 +7,11 @@ class CusTxtFiled extends StatelessWidget {
   String hint ;
   String Picon;
   CusTxtFiled(this.Picon,{Key? key,
-    required this.hint
+    required this.hint,
+    required this.inputData
   }) : super(key: key);
+
+  TextEditingController inputData = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +19,7 @@ class CusTxtFiled extends StatelessWidget {
       width:335,
       height: 57,
       child: TextField(
+        controller: inputData,
         decoration:  InputDecoration(
           prefixIconConstraints: const BoxConstraints.tightFor(width:45,height: 45),
           hintText: hint,
