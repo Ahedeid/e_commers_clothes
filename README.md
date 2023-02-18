@@ -1,5 +1,7 @@
 # codes
 
+[![Dart](https://github.com/Ahedeid/e_commers_clothes/actions/workflows/dart.yml/badge.svg)](https://github.com/Ahedeid/e_commers_clothes/actions/workflows/dart.yml)
+
 A new Flutter project.
 
 ## Getting Started
