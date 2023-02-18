@@ -9,8 +9,6 @@ const int secandTxtColor = 0xff7C7D7E;
 
 
 
-
-
 // Size in App
 const double smallSize = 16.0 ;
 const double medSize = 18.0 ;

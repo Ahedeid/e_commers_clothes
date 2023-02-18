@@ -40,7 +40,7 @@ class HomeCustAppBar extends StatelessWidget with PreferredSizeWidget {
         actions: [
           InkWell(
               onTap: () {},
-              child: SvgPicture.asset('assets/icons/Notification.svg')),
+              child: SvgPicture.asset('assets/icons/notification.svg')),
         ],
       ),
     );

@@ -2,16 +2,16 @@
 
 // Image in LaunchScreen
 
-const String logo = 'assets/images/Vector.svg';
+const String logo = 'assets/images/vector.svg';
 
 
 // Icons in App
-const String message = 'assets/icons/Message.svg';
-const String lock = 'assets/icons/Lock.svg';
+const String message = 'assets/icons/message.svg';
+const String lock = 'assets/icons/lock.svg';
 const String facebook = 'assets/icons/facebook.svg';
 const String google = 'assets/icons/google.svg';
-const String profile = 'assets/icons/Profile.svg';
-const String filterIcon = 'assets/icons/Filter.svg';
+const String profile = 'assets/icons/profile.svg';
+const String filterIcon = 'assets/icons/filter.svg';
 
 // icon in Bottom NavBar
 const String buy = 'assets/icons/buy.svg';
@@ -51,17 +51,17 @@ const String cover = 'assets/images/cover.png';
 const String person = 'assets/images/person.png';
 
 // icons in profile
-const String bag = 'assets/icons/Bag.svg';
+const String bag = 'assets/icons/bag.svg';
 const String star = 'assets/icons/star.svg';
-const String ticket = 'assets/icons/Ticket.svg';
+const String ticket = 'assets/icons/ticket.svg';
 
 
 // Image in Setting
-const String messagea = 'assets/icons/Messagea.svg';
+const String messagea = 'assets/icons/messagea.svg';
 const String update = 'assets/icons/update.svg';
-const String notificationa = 'assets/icons/Notificationa.svg';
-const String locka = 'assets/icons/Locka.svg';
-const String Info = 'assets/icons/Info.svg';
+const String notificationa = 'assets/icons/notificationa.svg';
+const String locka = 'assets/icons/locka.svg';
+const String Info = 'assets/icons/info.svg';
 
 
 // Image In Pay Methode
@@ -79,10 +79,10 @@ const String check = 'assets/images/check.svg';
 // Image drawer
 
 const String hearts = 'assets/icons/heart.svg';
-const String logout = 'assets/icons/Logout.svg';
-const String setting = 'assets/icons/Setting.svg';
-const String wallet = 'assets/icons/Wallet.svg';
-const String heartd = 'assets/icons/Heartss.svg';
+const String logout = 'assets/icons/logout.svg';
+const String setting = 'assets/icons/setting.svg';
+const String wallet = 'assets/icons/wallet.svg';
+const String heartd = 'assets/icons/heartss.svg';
 
 
 // وضع ال assets and images داخل متغير والتعامل معه

@@ -25,7 +25,7 @@ class ImageInOnBording extends StatelessWidget {
                 SvgPicture.asset(
                   _data[index].imagePath!,
                   width: 323.5,
-                  height: 325.5,
+                  height: MediaQuery.of(context).size.height * 0.4,
                 ),
               ],
             );

@@ -47,12 +47,12 @@ class _MPageViewState extends State<MPageView> {
       body: Column(
         children: [
           ImageInOnBording(controller: _controller, data: _data),
-          const SizedBox(height: 30),
+           SizedBox(height: MediaQuery.of(context).size.height *0.04),
           MainTxtOnBording(data: _data, index: _index),
           DetTxtOnBording(data: _data, index: _index),
-          const SizedBox(height: 40),
+           SizedBox(height: MediaQuery.of(context).size.height *0.05),
           CustButtonOnBording(index: _index, controller: _controller),
-          const SizedBox(height: 90)
+           SizedBox(height: MediaQuery.of(context).size.height *0.11)
         ],
       ),
     );
