@@ -3,10 +3,10 @@ import 'package:flutter_svg/svg.dart';
 
 import '../util/constant.dart';
 
-class CusTxtFiled extends StatelessWidget {
+class CustomeTxtFiled extends StatelessWidget {
   String hint ;
   String Picon;
-  CusTxtFiled(this.Picon,{Key? key,
+  CustomeTxtFiled(this.Picon,{Key? key,
     required this.hint,
     required this.inputData
   }) : super(key: key);

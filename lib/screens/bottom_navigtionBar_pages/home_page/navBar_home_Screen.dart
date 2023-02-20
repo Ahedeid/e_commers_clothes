@@ -32,7 +32,7 @@ class NavBarHomeScreen extends StatelessWidget {
             const SizedBox(height: 40),
             const HomeNewArrival(),
              HomeHorList2(),
-            const SizedBox(height: 30),
+            const SizedBox(height: 25),
           ],
         ),
       ),

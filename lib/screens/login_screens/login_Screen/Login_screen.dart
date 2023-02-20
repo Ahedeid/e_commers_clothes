@@ -19,7 +19,7 @@ class LogInScreen extends StatelessWidget {
     SharedPreferences pref = await SharedPreferences.getInstance();
     pref.setString('email', emailData.text);
     pref.setString('password', inputData.text);
-    print(inputData.text);
+    debugPrint(inputData.text);
   }
 
 
@@ -27,29 +27,32 @@ class LogInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding:const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            SizedBox(height:MediaQuery.of(context).size.height * 0.06 ,),
-            const LogoInLogin(),
-             SizedBox(height:MediaQuery.of(context).size.height * 0.05),
-            const TxtLogin(),
-             SizedBox(height:MediaQuery.of(context).size.height * 0.05),
-            CusTxtFiled(hint: 'Email', message, inputData: emailData,),
-             SizedBox(height: MediaQuery.of(context).size.height *0.01),
-            CusTxtFiled(hint: 'Password', lock, inputData: inputData,),
-            const LoginTxtForgot(),
-             SizedBox(height:MediaQuery.of(context).size.height * 0.05),
-            LoginCustButton(txt: 'Log in', Nav: 'drawer_screen', setData: setData(), inputData: inputData,),
-             SizedBox(height:MediaQuery.of(context).size.height * 0.04),
-            const SectionOR(),
-             SizedBox(height:MediaQuery.of(context).size.height * 0.04),
-            const LoginSectionIcons(),
-             SizedBox(height:MediaQuery.of(context).size.height * 0.03),
-             LoginDontHaveAccount(SacTxt: 'Don’t have an account?', TxtButton: 'Sign Up', Nav: 'signup_screen',),
-             SizedBox(height:MediaQuery.of(context).size.height * 0.03),
-          ],
+        padding:const EdgeInsets.symmetric(horizontal: 20,),
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              SizedBox(height:MediaQuery.of(context).size.height * 0.15),
+              const LogoInLogin(),
+               SizedBox(height:MediaQuery.of(context).size.height * 0.05),
+              const TxtLogin(),
+               SizedBox(height:MediaQuery.of(context).size.height * 0.05),
+              CustomeTxtFiled(hint: 'Email', message, inputData: emailData,),
+               SizedBox(height: MediaQuery.of(context).size.height *0.01),
+              CustomeTxtFiled(hint: 'Password', lock, inputData: inputData,),
+              const LoginTxtForgot(),
+               SizedBox(height:MediaQuery.of(context).size.height * 0.05),
+              LoginCustButton(txt: 'Log in', Nav: 'drawer_screen', setData: setData(), inputData: inputData,),
+               SizedBox(height:MediaQuery.of(context).size.height * 0.04),
+              const SectionOR(),
+               SizedBox(height:MediaQuery.of(context).size.height * 0.04),
+              const LoginSectionIcons(),
+               SizedBox(height:MediaQuery.of(context).size.height * 0.03),
+               LoginDontHaveAccount(SacTxt: 'Don’t have an account?', TxtButton: 'Sign Up', Nav: 'signup_screen',),
+               SizedBox(height:MediaQuery.of(context).size.height * 0.03),
+            ],
+          ),
         ),
       ),
     );
