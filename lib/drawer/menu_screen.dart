@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -13,7 +12,6 @@ class MenuScreen extends StatefulWidget {
 }
 
 class _MenuScreenState extends State<MenuScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +20,7 @@ class _MenuScreenState extends State<MenuScreen> {
         padding: const EdgeInsets.only(top: 70),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -32,10 +31,10 @@ class _MenuScreenState extends State<MenuScreen> {
                       borderRadius: BorderRadius.circular(50),
                       child: Image.asset(person)),
                 ),
-                Column(
-                  children: const [
+                const Column(
+                  children: [
                     Text(
-                      'Alex Nikiforov',
+                      'Ahed Eid',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 18,
@@ -43,7 +42,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     ),
                     SizedBox(height: 4),
                     Text(
-                      'alex@msn.com',
+                      'ahedeid2000@gmail.com',
                       style: TextStyle(color: Color(secandTxtColor)),
                     ),
                   ],
@@ -57,29 +56,46 @@ class _MenuScreenState extends State<MenuScreen> {
                 )
               ],
             ),
-         const SizedBox(height: 40 ),
-         drawerListTile(image: heartd, txt: 'My favorites',),
-            const SizedBox(height: 10 ),
-            drawerListTile(image: wallet, txt: 'Wallets',),
-            const SizedBox(height: 10 ),
-            drawerListTile(image: bag, txt: 'My orders',),
-            const SizedBox(height: 10 ),
-            drawerListTile(image: Info, txt: 'About us',),
-            const SizedBox(height: 10 ),
-            drawerListTile(image: locka, txt: 'Privacy policy',),
-            const SizedBox(height: 10 ),
-            drawerListTile(image: setting, txt: 'Settings',),
-
-
-            const SizedBox(height: 50 ),
-            drawerListTile(image: logout, txt: 'Log out',),
-            const SizedBox(height: 60),
+            const SizedBox(height: 40),
+            const DrawerListTile(
+              image: heartd,
+              txt: 'My favorites',
+            ),
+            const SizedBox(height: 8),
+            const DrawerListTile(
+              image: wallet,
+              txt: 'Wallets',
+            ),
+            const SizedBox(height: 8),
+            const DrawerListTile(
+              image: bag,
+              txt: 'My orders',
+            ),
+            const SizedBox(height: 8),
+            const DrawerListTile(
+              image: Info,
+              txt: 'About us',
+            ),
+            const SizedBox(height: 8),
+            const DrawerListTile(
+              image: locka,
+              txt: 'Privacy policy',
+            ),
+            const SizedBox(height: 8),
+            const DrawerListTile(
+              image: setting,
+              txt: 'Settings',
+            ),
+            const SizedBox(height: 50),
+            const DrawerListTile(
+              image: logout,
+              txt: 'Log out',
+            ),
+            const SizedBox(height: 50),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: SizedBox(
-                  height: 60,
-                  width: 52,
-                  child: SvgPicture.asset(logo)),
+                  height: 60, width: 52, child: SvgPicture.asset(logo)),
             )
           ],
         ),
@@ -88,12 +104,13 @@ class _MenuScreenState extends State<MenuScreen> {
   }
 }
 
-class drawerListTile extends StatelessWidget {
-   drawerListTile({
-    required this.image,required this.txt
-  });
-String txt ;
-String image ;
+class DrawerListTile extends StatelessWidget {
+  const DrawerListTile({super.key, required this.image, required this.txt});
+
+  final String txt;
+
+  final String image;
+
   @override
   Widget build(BuildContext context) {
     return ListTile(

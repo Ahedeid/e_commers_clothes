@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../util/constant.dart';
 
 
-class CustAppBarOnBording extends StatelessWidget with PreferredSizeWidget{
+class CustAppBarOnBording extends StatelessWidget implements PreferredSizeWidget{
   const CustAppBarOnBording({
     Key? key,
     required int index,

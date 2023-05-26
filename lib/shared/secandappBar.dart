@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../util/constant.dart';
 
 
-class SecandAppBar extends StatelessWidget with PreferredSizeWidget {
+class SecandAppBar extends StatelessWidget implements PreferredSizeWidget {
   String title ;
    SecandAppBar({super.key,
     required this.title

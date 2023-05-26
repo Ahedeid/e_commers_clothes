@@ -6,7 +6,7 @@ import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import '../../../util/constant.dart';
 
 
-class HomeCustAppBar extends StatelessWidget with PreferredSizeWidget {
+class HomeCustAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeCustAppBar({
     Key? key,
   }) : super(key: key);
@@ -22,9 +22,9 @@ class HomeCustAppBar extends StatelessWidget with PreferredSizeWidget {
         leading:  AppBarIconDrawer(
           contet: context,
         ),
-        title: Row(
+        title: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
+          children: [
             Icon(
               Icons.location_on_outlined,
               color: Colors.black,
@@ -52,7 +52,6 @@ class HomeCustAppBar extends StatelessWidget with PreferredSizeWidget {
 
 class AppBarIconDrawer extends StatefulWidget {
   AppBarIconDrawer({
-
     required this.contet,
     Key? key,
   }) : super(key: key);
