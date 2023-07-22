@@ -1,13 +1,13 @@
+import 'package:codes/util/constant.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../util/constant.dart';
-
-
-class CustAppBarOnBording extends StatelessWidget implements PreferredSizeWidget{
-  const CustAppBarOnBording({
+class CustomAppBarOnBoarding extends StatelessWidget
+    implements PreferredSizeWidget {
+  const CustomAppBarOnBoarding({
     Key? key,
     required int index,
-  }) : _index = index, super(key: key);
+  })  : _index = index,
+        super(key: key);
 
   final int _index;
 
@@ -16,26 +16,34 @@ class CustAppBarOnBording extends StatelessWidget implements PreferredSizeWidget
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
-      title:
-      Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-        Text(
-          '${_index+1}/3',
-          style: const TextStyle(color: Colors.black,),
-        ),
-        InkWell(
-          onTap: (){
-            Navigator.pushReplacementNamed(context, 'login_screen');
-          },
-          child: const Text(
-            'Skip',
-            style: TextStyle(color: Colors.black,),
+      title: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+        child:
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          Text(
+            '${_index + 1}/3',
+            style: const TextStyle(
+              fontSize: 16,
+              color: Colors.black,
+            ),
           ),
-        ),
-      ]),
+          InkWell(
+            onTap: () {
+              Navigator.pushReplacementNamed(context, 'login_screen');
+            },
+            child: const Text(
+              'Skip',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.black,
+              ),
+            ),
+          ),
+        ]),
+      ),
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(highAppBar) ;
+  Size get preferredSize => const Size.fromHeight(highAppBar);
 }

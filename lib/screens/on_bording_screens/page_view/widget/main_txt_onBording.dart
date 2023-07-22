@@ -14,15 +14,12 @@ class MainTxtOnBording extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 60,
-      child: Text(
-        _data[_index].title,
-        style: const TextStyle(
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
-            color: Colors.black),
-      ),
+    return Text(
+      _data[_index].title,
+      style: const TextStyle(
+          fontSize: 28,
+          fontWeight: FontWeight.bold,
+          color: Colors.black),
     );
   }
 }

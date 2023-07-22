@@ -1,12 +1,11 @@
+import 'package:codes/model/p_models.dart';
 import 'package:codes/screens/on_bording_screens/page_view/widget/cus_appBar_onBording.dart';
 import 'package:codes/screens/on_bording_screens/page_view/widget/cust_button_onBording.dart';
 import 'package:codes/screens/on_bording_screens/page_view/widget/det_txt_onBording.dart';
 import 'package:codes/screens/on_bording_screens/page_view/widget/image_in_onBording.dart';
 import 'package:codes/screens/on_bording_screens/page_view/widget/main_txt_onBording.dart';
+import 'package:codes/util/constant.dart';
 import 'package:flutter/material.dart';
-import '../../../model/p_models.dart';
-import '../../../util/constant.dart';
-
 
 class MPageView extends StatefulWidget {
   const MPageView({Key? key}) : super(key: key);
@@ -43,22 +42,25 @@ class _MPageViewState extends State<MPageView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(backGroundColor),
-      appBar: CustAppBarOnBording(index: _index,),
-      body: Column(
-        children: [
-          ImageInOnBording(controller: _controller, data: _data),
-           SizedBox(height: MediaQuery.of(context).size.height *0.04),
-          MainTxtOnBording(data: _data, index: _index),
-          DetTxtOnBording(data: _data, index: _index),
-           SizedBox(height: MediaQuery.of(context).size.height *0.05),
-          CustButtonOnBording(index: _index, controller: _controller),
-           SizedBox(height: MediaQuery.of(context).size.height *0.11)
-        ],
+      appBar: CustomAppBarOnBoarding(
+        index: _index,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 26),
+        child: Column(
+          children: [
+            Expanded(
+                flex: 3,
+                child: ImageInOnBording(controller: _controller, data: _data)),
+            MainTxtOnBording(data: _data, index: _index),
+            const SizedBox(height: 16),
+            DetTxtOnBoarding(data: _data, index: _index),
+            const SizedBox(height: 35),
+            CustButtonOnBording(index: _index, controller: _controller),
+            const Expanded(child: SizedBox(height: 1))
+          ],
+        ),
       ),
     );
   }
 }
-
-
-
-

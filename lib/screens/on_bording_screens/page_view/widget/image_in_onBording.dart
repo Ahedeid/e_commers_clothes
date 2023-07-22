@@ -15,21 +15,15 @@ class ImageInOnBording extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: PageView.builder(
-          controller: _controller,
-          itemCount: _data.length,
-          itemBuilder: (context, index) {
-            return Column(
-              children: [
-                SvgPicture.asset(
-                  _data[index].imagePath!,
-                  width: 323.5,
-                  height: MediaQuery.of(context).size.height * 0.4,
-                ),
-              ],
-            );
-          }),
-    );
+    return PageView.builder(
+        controller: _controller,
+        itemCount: _data.length,
+        itemBuilder: (context, index) {
+          return SvgPicture.asset(
+            _data[index].imagePath!,
+            width: 323.5,
+            height: MediaQuery.of(context).size.height * 0.4,
+          );
+        });
   }
 }
