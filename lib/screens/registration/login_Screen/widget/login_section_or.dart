@@ -7,19 +7,14 @@ class SectionOR extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: const [
+    return const Row(
+      children: [
         Divider(
-          indent: 50,
-          endIndent: 120,
-          height: 5,
-          thickness: 5,
+          thickness: 1,
           color: Colors.black,
         ),
         Text('Or'),
         Divider(
-          indent: 20,
-          endIndent: 70,
           color: Colors.black,
         )
       ],

@@ -17,8 +17,8 @@ class MainTxtOnBording extends StatelessWidget {
     return Text(
       _data[_index].title,
       style: const TextStyle(
-          fontSize: 28,
-          fontWeight: FontWeight.bold,
+          fontSize: 22,
+          fontWeight: FontWeight.w500,
           color: Colors.black),
     );
   }

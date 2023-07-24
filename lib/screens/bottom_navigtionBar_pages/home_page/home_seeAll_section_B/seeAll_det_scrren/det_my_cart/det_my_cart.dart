@@ -23,7 +23,7 @@ class DetMyCartScreen extends StatelessWidget {
               const SizedBox(height: 10),
               const MyCartSubTotal(),
               const SizedBox(height: 32),
-              CustButton(txt: 'Checkout', color: const Color(primeColorInApp), nav: 'checkOut_screen',)
+              CustomButton(txt: 'Checkout', color: const Color(primeColorInApp), nav: 'checkOut_screen',)
 
             ],
           ),

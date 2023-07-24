@@ -23,13 +23,13 @@ class PaymentScreen extends StatelessWidget {
             const SizedBox(height: 10),
             const PaymentTXTSecand(),
             const SizedBox(height: 45),
-            CustButton(
+            CustomButton(
               txt: 'Get your receipt',
               color: const Color(primeColorInApp),
               nav: '',
             ),
             const SizedBox(height: 15),
-            CustButton(
+            CustomButton(
               txt: 'Back to Home',
               color: const Color(0xffFFE9E2),
               nav: 'home_screen',

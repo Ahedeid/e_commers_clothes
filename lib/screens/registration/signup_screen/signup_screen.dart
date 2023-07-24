@@ -50,19 +50,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(height: MediaQuery.of(context).size.height * 0.02),
               const TxtSignUp(),
               SizedBox(height: MediaQuery.of(context).size.height * 0.04),
-              CustomeTxtFiled(
+              CustomTxtFiled(
                 hint: 'Name',
                 profile,
                 inputData: nameData,
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-              CustomeTxtFiled(
+              CustomTxtFiled(
                 hint: 'Email',
                 message,
                 inputData: emailData,
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-              CustomeTxtFiled(
+              CustomTxtFiled(
                 hint: 'Password',
                 lock,
                 inputData: inputData,

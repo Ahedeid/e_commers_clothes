@@ -167,7 +167,7 @@ class _FilterBottomSheetState extends State<FilterBottomSheet> {
               }),
             ),
             const SizedBox(height: 40),
-            CustButton(txt: 'Apply Filter', color: const Color(primeColorInApp), nav: '',),
+            CustomButton(txt: 'Apply Filter', color: const Color(primeColorInApp), nav: '',),
           ],
         ),
       ),

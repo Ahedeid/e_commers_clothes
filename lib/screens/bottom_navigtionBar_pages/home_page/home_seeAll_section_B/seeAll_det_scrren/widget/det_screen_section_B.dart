@@ -92,7 +92,7 @@ Shirts''',style: TextStyle(fontWeight: FontWeight.bold,fontSize: bigSize),),
                 ],
               ),
               const SizedBox(height: 22),
-              CustButton(txt: 'Add to Cart', color: const Color(primeColorInApp), nav: 'det_my_cart_screen',)
+              CustomButton(txt: 'Add to Cart', color: const Color(primeColorInApp), nav: 'det_my_cart_screen',)
 
             ],
           ),
