@@ -53,6 +53,7 @@ class LogInScreen extends StatelessWidget {
                     inputData: emailData,
                     keyboardType: TextInputType.emailAddress,
                     validator: (val) => val!.validateEmail(),
+                    textInputAction: TextInputAction.next,
                   ),
                   const SizedBox(height: 16),
                   CustomTxtFiled(
@@ -62,6 +63,7 @@ class LogInScreen extends StatelessWidget {
                     keyboardType: TextInputType.text,
                     validator: (val) => val!.validatePassword(),
                     obscureText: true,
+                    textInputAction: TextInputAction.done,
                   ),
                   const SizedBox(height: 18),
                   const LoginTxtForgot(),

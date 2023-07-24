@@ -59,6 +59,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     inputData: nameData,
                     keyboardType: TextInputType.name,
                     validator: (val) => val!.validateUserName(),
+                    textInputAction: TextInputAction.next,
                   ),
                   const SizedBox(height: 11),
                   CustomTxtFiled(
@@ -67,6 +68,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     inputData: emailData,
                     keyboardType: TextInputType.emailAddress,
                     validator: (val) => val!.validateEmail(),
+                    textInputAction: TextInputAction.next,
                   ),
                   const SizedBox(height: 11),
                   CustomTxtFiled(
@@ -74,7 +76,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     lock,
                     inputData: inputData,
                     keyboardType: TextInputType.text,
+                    obscureText: true,
                     validator: (val) => val!.validatePassword(),
+                    textInputAction: TextInputAction.done,
                   ),
                   const SizedBox(height: 16),
                   const AcceptCheck(),
