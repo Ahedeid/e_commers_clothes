@@ -1,12 +1,13 @@
 import 'package:codes/screens/bottom_navigtionBar_pages/home_page/home_seeAll_section_B/seeAll_det_scrren/det_my_cart/checkout_Screen/widget/checkOun_card_total.dart';
 import 'package:codes/screens/bottom_navigtionBar_pages/home_page/home_seeAll_section_B/seeAll_det_scrren/det_my_cart/checkout_Screen/widget/checkOut_hedar_txt.dart';
 import 'package:codes/screens/bottom_navigtionBar_pages/home_page/home_seeAll_section_B/seeAll_det_scrren/det_my_cart/checkout_Screen/widget/checkOut_pay_methode.dart';
+import 'package:codes/shared/custom_appBar.dart';
 import 'package:codes/util/constant.dart';
+import 'package:codes/util/constat_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:slider_button/slider_button.dart';
 
-import '../../../../../../../shared/custom_appBar.dart';
-import '../../../../../../../util/constat_assets.dart';
+
 
 class CheckOutScreen extends StatefulWidget {
   const CheckOutScreen({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(
-          horizontal: 21,
+          horizontal: 20,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

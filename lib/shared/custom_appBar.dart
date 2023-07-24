@@ -1,5 +1,6 @@
 import 'package:codes/util/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -51,6 +52,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
           )
         ],
+        systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
     );
   }

@@ -10,9 +10,11 @@ import 'package:codes/screens/registration/login_Screen/Login_screen.dart';
 import 'package:codes/screens/registration/signup_screen/signup_screen.dart';
 import 'package:codes/screens/settings/setting_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'drawer/drawer_screen.dart';
 
 void main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPrefController().init();
   runApp(const ClothesECommerce());
@@ -26,6 +28,11 @@ class ClothesECommerce extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // home: const DrawerScreen(),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
+        ),
+      ),
       initialRoute: 'launch_screen',
       routes: {
         'launch_screen': (context) => const LaunchScreen(),

@@ -75,7 +75,7 @@ class LogInScreen extends StatelessWidget {
                     onPressed: () {
                       if (loginFormKey.currentState!.validate()) {
                         SharedPrefController().setLogedin();
-                        Navigator.pushReplacementNamed(context, "home_screen");
+                        Navigator.pushReplacementNamed(context, "drawer_screen");
                         // SharedPrefController()
                         //     .preferences
                         //     .setString('email', emailData.text);

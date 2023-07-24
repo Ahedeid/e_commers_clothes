@@ -1,3 +1,4 @@
+import 'package:codes/logic/localData/shared_pref.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -32,6 +33,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       child: Image.asset(person)),
                 ),
                 const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'Ahed Eid',
@@ -40,7 +42,7 @@ class _MenuScreenState extends State<MenuScreen> {
                           fontSize: 18,
                           color: Colors.white),
                     ),
-                    SizedBox(height: 4),
+                    SizedBox(height: 6),
                     Text(
                       'ahedeid2000@gmail.com',
                       style: TextStyle(color: Color(secandTxtColor)),
@@ -57,48 +59,55 @@ class _MenuScreenState extends State<MenuScreen> {
               ],
             ),
             const SizedBox(height: 40),
-             DrawerListTile(
+            DrawerListTile(
               image: heartd,
               txt: 'My favorites',
-              onTap: (){},
+              onTap: () {},
             ),
             const SizedBox(height: 8),
-             DrawerListTile(
+            DrawerListTile(
               image: wallet,
               txt: 'Wallets',
-              onTap: (){},
+              onTap: () {
+                Navigator.pushNamed(context, 'checkOut_screen');
+              },
             ),
             const SizedBox(height: 8),
-             DrawerListTile(
+            DrawerListTile(
               image: bag,
               txt: 'My orders',
-              onTap: (){},
+              onTap: () {
+                // Navigator.pushNamed(context, 'checkOut_screen');
+              },
             ),
             const SizedBox(height: 8),
-             DrawerListTile(
+            DrawerListTile(
               image: Info,
               txt: 'About us',
-              onTap: (){},
+              onTap: () {},
             ),
             const SizedBox(height: 8),
-             DrawerListTile(
+            DrawerListTile(
               image: locka,
               txt: 'Privacy policy',
-              onTap: (){},
+              onTap: () {},
             ),
             const SizedBox(height: 8),
-             DrawerListTile(
+            DrawerListTile(
               image: setting,
               txt: 'Settings',
-              onTap: (){
+              onTap: () {
                 Navigator.pushNamed(context, 'setting_screen');
               },
             ),
             const SizedBox(height: 50),
-             DrawerListTile(
+            DrawerListTile(
               image: logout,
               txt: 'Log out',
-              onTap: (){},
+              onTap: () {
+                SharedPrefController().clear();
+                Navigator.pushReplacementNamed(context, 'login_screen');
+              },
             ),
             const SizedBox(height: 50),
             Padding(
@@ -114,8 +123,12 @@ class _MenuScreenState extends State<MenuScreen> {
 }
 
 class DrawerListTile extends StatelessWidget {
-  const DrawerListTile(
-      {super.key, required this.image, required this.txt, required this.onTap,});
+  const DrawerListTile({
+    super.key,
+    required this.image,
+    required this.txt,
+    required this.onTap,
+  });
 
   final String txt;
 
@@ -126,7 +139,7 @@ class DrawerListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap:onTap,
+      onTap: onTap,
       leading: Container(
         width: 42,
         height: 43,
