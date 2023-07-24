@@ -1,4 +1,3 @@
-import 'package:codes/drawer/drawer_screen.dart';
 import 'package:codes/screens/bottom_navigtionBar_pages/cart_page/cart_screen.dart';
 import 'package:codes/screens/bottom_navigtionBar_pages/home_page/navBar_home_Screen.dart';
 import 'package:codes/screens/bottom_navigtionBar_pages/liked_page/liked_screen.dart';
@@ -23,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   List pages = [
-    const NavBarHomeScreen(),
+     NavBarHomeScreen(),
     CartScreen(),
     const LikedScreen(),
     const ProfileScreen()
@@ -36,7 +35,9 @@ class _HomeScreenState extends State<HomeScreen> {
       extendBodyBehindAppBar: true,
       body: pages[_selectedIndex],
       bottomNavigationBar: CustomBottomNavBar(
-          selectedIndex: _selectedIndex, onItemTapped: _onItemTapped),
+        selectedIndex: _selectedIndex,
+        onItemTapped: _onItemTapped,
+      ),
     );
   }
 }

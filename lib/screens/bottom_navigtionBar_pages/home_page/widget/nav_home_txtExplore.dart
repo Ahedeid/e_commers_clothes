@@ -1,9 +1,5 @@
-
+import 'package:codes/util/constant.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../util/constant.dart';
-
-
 
 class TxtExplore extends StatelessWidget {
   const TxtExplore({
@@ -16,8 +12,8 @@ class TxtExplore extends StatelessWidget {
       'Explore',
       style: TextStyle(
           color: Color(primeTxtColor),
-          fontSize: 24,
-          fontWeight: FontWeight.bold),
+          fontSize: 32,
+          fontWeight: FontWeight.w500),
     );
   }
 }

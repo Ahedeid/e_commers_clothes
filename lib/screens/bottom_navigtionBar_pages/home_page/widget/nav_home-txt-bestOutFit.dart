@@ -13,7 +13,8 @@ class TxtBestOutFit extends StatelessWidget {
       'best Outfits for you',
       style: TextStyle(
         color: Color(secandTxtColor),
-        fontSize: 24,
+        fontSize: 20,
+        fontWeight: FontWeight.w400,
       ),
     );
   }

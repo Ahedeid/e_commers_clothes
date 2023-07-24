@@ -67,6 +67,8 @@ class CustomTxtFiled extends StatelessWidget {
         suffixIcon: suffixIcon,
         suffix: suffix,
         prefix: const Text('  '),
+        // suffixIconConstraints:
+        // const BoxConstraints(minWidth: 65, minHeight: 50),
         prefixIcon: Container(
           margin: const EdgeInsets.all(5),
           decoration: BoxDecoration(

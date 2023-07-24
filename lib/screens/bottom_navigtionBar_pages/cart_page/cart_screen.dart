@@ -1,12 +1,11 @@
 import 'package:codes/screens/bottom_navigtionBar_pages/cart_page/widget/my_orders_contentCard.dart';
+import 'package:codes/shared/secandappBar.dart';
+import 'package:codes/util/constat_assets.dart';
 import 'package:flutter/material.dart';
-
-import '../../../shared/secandappBar.dart';
-import '../../../util/constat_assets.dart';
 
 class CartScreen extends StatelessWidget {
   CartScreen({Key? key}) : super(key: key);
-  List mycart_images = [
+  final List myCartImages = [
     im31,
     im32,
     im33,
@@ -26,14 +25,14 @@ class CartScreen extends StatelessWidget {
             shrinkWrap: true,
             itemCount: 5,
             itemBuilder: (context, index) {
-              return Container(
+              return SizedBox(
                 height: 92,
-                decoration:
-                    BoxDecoration(borderRadius: BorderRadius.circular(10)),
                 child: Card(
                   elevation: 0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
                   child: MyOrdersContentCard(
-                    mycart_images: mycart_images,
+                    myCartImages: myCartImages,
                     index: index,
                   ),
                 ),

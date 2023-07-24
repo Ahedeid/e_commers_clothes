@@ -1,24 +1,22 @@
+import 'package:codes/util/constant.dart';
+import 'package:codes/util/constat_assets.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../util/constant.dart';
-import '../../../../util/constat_assets.dart';
-
-
 class HomeHorList2 extends StatelessWidget {
-   HomeHorList2({
+  HomeHorList2({
     Key? key,
   }) : super(key: key);
 
-   List home_horB_images =[
-     im1,
-     im2,
-     im3,
-     im4,
-     im1,
-     im2,
-     im3,
-     im4,
-   ];
+  final List home_horB_images = [
+    im1,
+    im2,
+    im3,
+    im4,
+    im1,
+    im2,
+    im3,
+    im4,
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -29,28 +27,31 @@ class HomeHorList2 extends StatelessWidget {
           itemCount: 6,
           itemBuilder: (context, index) {
             return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 7),
               child: InkWell(
-                onTap: (){
+                onTap: () {
                   Navigator.pushNamed(context, 'seeAll_det_screen');
                 },
                 child: Container(
                   width: 154,
                   decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(15),),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                   child: Column(
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 10, vertical: 10),
                         child: Container(
-                            width: 142,
-                            height: 140,
-                            decoration: BoxDecoration(
-                                color: const Color(0xffEFEFF2),
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Image.asset(home_horB_images[index])),
+                          width: 142,
+                          height: 140,
+                          decoration: BoxDecoration(
+                            color: const Color(0xffEFEFF2),
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Image.asset(home_horB_images[index]),
+                        ),
                       ),
                       const Text(
                         'Casual Henley Shirts',

@@ -1,19 +1,21 @@
 
+import 'package:codes/util/constant.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../util/constant.dart';
 
 class HomeNewArrival extends StatelessWidget {
   const HomeNewArrival({
     Key? key,
+    required this.title,
   }) : super(key: key);
 
+  final String title ;
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: const Text(
-        'New Arrival',
-        style: TextStyle(
+      leading:  Text(
+       title,
+        style: const TextStyle(
           fontSize: bigSize,
           fontWeight: FontWeight.bold,
           color: Color(primeTxtColor),

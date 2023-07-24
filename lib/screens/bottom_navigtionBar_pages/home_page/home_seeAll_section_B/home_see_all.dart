@@ -28,7 +28,7 @@ class HomeSeeAllSectionB extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: ListView(
           children: [
-            CustSearhBar(txt: 'Shirt'),
+            CustomSearchBar(txt: 'Shirt'),
             const ExpansionTile(
               title: Text(
                 'Recent searches',
