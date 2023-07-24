@@ -1,6 +1,5 @@
+import 'package:codes/util/constant.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../../../../util/constant.dart';
 
 class MyCartSubTotal extends StatelessWidget {
   const MyCartSubTotal({
@@ -12,8 +11,17 @@ class MyCartSubTotal extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: const [
-        Text('Subtotal   :',style: TextStyle(color: Color(primeTxtColor),fontSize: smallSize),),
-        Text('\$740',style: TextStyle(color: Color(primeTxtColor),fontSize: medSize,fontWeight: FontWeight.bold),),
+        Text(
+          'Subtotal   :',
+          style: TextStyle(color: Color(primeTxtColor), fontSize: smallSize),
+        ),
+        Text(
+          '\$740',
+          style: TextStyle(
+              color: Color(primeTxtColor),
+              fontSize: medSize,
+              fontWeight: FontWeight.bold),
+        ),
       ],
     );
   }

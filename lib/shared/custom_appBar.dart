@@ -1,33 +1,39 @@
+import 'package:codes/util/constant.dart';
 import 'package:flutter/material.dart';
 
-import '../util/constant.dart';
-
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  String title ;
-  bool action ;
-   CustomAppBar(
-   {super.key, required this.title, required this.action }
-  ) ;
+  final String title;
+
+  final bool action;
+
+  CustomAppBar({super.key, required this.title, required this.action});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 20,top: 10,bottom: 10),
+      padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
       child: AppBar(
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title:   Text(title,style: const TextStyle(fontSize: titleAppBarSize,fontWeight: FontWeight.bold,color: Color(primeTxtColor)),),
-         leading: IconButton(
-           onPressed: () {
-             Navigator.pop(context);
-           },
-           icon: const Icon(Icons.arrow_back_ios),
-           color: Colors.black,
-         ),
+        title: Text(
+          title,
+          style: const TextStyle(
+            fontSize: titleAppBarSize,
+            fontWeight: FontWeight.bold,
+            color: Color(primeTxtColor),
+          ),
+        ),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back_ios),
+          color: Colors.black,
+        ),
         actions: [
           Visibility(
-            visible: action ,
+            visible: action,
             child: InkWell(
               onTap: () {},
               child: Container(

@@ -1,9 +1,8 @@
 import 'package:codes/util/constant.dart';
+import 'package:codes/util/constat_assets.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-import '../../util/constat_assets.dart';
 
 class SettingScreen extends StatefulWidget {
   const SettingScreen({Key? key}) : super(key: key);
@@ -13,7 +12,6 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +19,15 @@ class _SettingScreenState extends State<SettingScreen> {
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+          ),
+        ),
         title: const Text(
           'Settings',
           style: TextStyle(
@@ -52,9 +59,15 @@ class _SettingScreenState extends State<SettingScreen> {
               nav: '',
             ),
             const SizedBox(height: 10),
-            SettingSwitchs(image: notificationa, txt: 'Notification',),
+            SettingSwitchs(
+              image: notificationa,
+              txt: 'Notification',
+            ),
             const SizedBox(height: 10),
-            SettingSwitchs(image: update, txt: 'Update',),
+            SettingSwitchs(
+              image: update,
+              txt: 'Update',
+            ),
           ],
         ),
       ),
@@ -62,13 +75,12 @@ class _SettingScreenState extends State<SettingScreen> {
   }
 }
 
-
 class SettingSwitchs extends StatefulWidget {
-   SettingSwitchs({
-     required this.image,required this.txt
-});
-  String txt ;
-  String image ;
+  SettingSwitchs({required this.image, required this.txt});
+
+  final String txt;
+
+  final String image;
 
   @override
   State<SettingSwitchs> createState() => _SettingSwitchsState();
@@ -85,7 +97,7 @@ class _SettingSwitchsState extends State<SettingSwitchs> {
 
   @override
   Widget build(BuildContext context) {
-    return  ListTile(
+    return ListTile(
       leading: Container(
           width: 42,
           height: 43,
@@ -93,9 +105,12 @@ class _SettingSwitchsState extends State<SettingSwitchs> {
             borderRadius: BorderRadius.circular(10),
             color: const Color.fromRGBO(246, 121, 82, 0.2),
           ),
-          child: SvgPicture.asset(widget.image,fit: BoxFit.scaleDown,)),
-      title:  Text(
-       widget.txt ,
+          child: SvgPicture.asset(
+            widget.image,
+            fit: BoxFit.scaleDown,
+          )),
+      title: Text(
+        widget.txt,
         style: const TextStyle(color: Colors.black),
       ),
       trailing: CupertinoSwitch(
@@ -106,13 +121,12 @@ class _SettingSwitchsState extends State<SettingSwitchs> {
   }
 }
 
-
 class SettingTile extends StatelessWidget {
-  String txt;
+ final String txt;
 
-  String image;
+ final String image;
 
-  String nav;
+ final String nav;
 
   SettingTile(
       {super.key, required this.nav, required this.txt, required this.image});

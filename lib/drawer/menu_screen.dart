@@ -57,39 +57,48 @@ class _MenuScreenState extends State<MenuScreen> {
               ],
             ),
             const SizedBox(height: 40),
-            const DrawerListTile(
+             DrawerListTile(
               image: heartd,
               txt: 'My favorites',
+              onTap: (){},
             ),
             const SizedBox(height: 8),
-            const DrawerListTile(
+             DrawerListTile(
               image: wallet,
               txt: 'Wallets',
+              onTap: (){},
             ),
             const SizedBox(height: 8),
-            const DrawerListTile(
+             DrawerListTile(
               image: bag,
               txt: 'My orders',
+              onTap: (){},
             ),
             const SizedBox(height: 8),
-            const DrawerListTile(
+             DrawerListTile(
               image: Info,
               txt: 'About us',
+              onTap: (){},
             ),
             const SizedBox(height: 8),
-            const DrawerListTile(
+             DrawerListTile(
               image: locka,
               txt: 'Privacy policy',
+              onTap: (){},
             ),
             const SizedBox(height: 8),
-            const DrawerListTile(
+             DrawerListTile(
               image: setting,
               txt: 'Settings',
+              onTap: (){
+                Navigator.pushNamed(context, 'setting_screen');
+              },
             ),
             const SizedBox(height: 50),
-            const DrawerListTile(
+             DrawerListTile(
               image: logout,
               txt: 'Log out',
+              onTap: (){},
             ),
             const SizedBox(height: 50),
             Padding(
@@ -105,15 +114,19 @@ class _MenuScreenState extends State<MenuScreen> {
 }
 
 class DrawerListTile extends StatelessWidget {
-  const DrawerListTile({super.key, required this.image, required this.txt});
+  const DrawerListTile(
+      {super.key, required this.image, required this.txt, required this.onTap,});
 
   final String txt;
 
   final String image;
 
+  final void Function()? onTap;
+
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      onTap:onTap,
       leading: Container(
         width: 42,
         height: 43,
