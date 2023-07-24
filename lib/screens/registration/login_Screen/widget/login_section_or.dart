@@ -8,14 +8,22 @@ class SectionOR extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Divider(
-          thickness: 1,
-          color: Colors.black,
+        Expanded(
+          child: Divider(
+            indent: 50,
+            color: Colors.black,
+          ),
         ),
+        SizedBox(width: 19),
         Text('Or'),
-        Divider(
-          color: Colors.black,
+        SizedBox(width: 19),
+        Expanded(
+          child: Divider(
+            endIndent: 50,
+            color: Colors.black,
+          ),
         )
       ],
     );

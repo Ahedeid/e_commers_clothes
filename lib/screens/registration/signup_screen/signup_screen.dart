@@ -27,6 +27,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var media = MediaQuery.of(context).size.height;
     return Scaffold(
       body: GestureDetector(
         onTap: () {
@@ -47,7 +48,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.15),
+                  SizedBox(height: media * 0.15),
                   const LogoInLogin(),
                   const SizedBox(height: 40),
                   const TxtSignUp(),
@@ -88,11 +89,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       }
                     },
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 40),
                   const SectionOR(),
                   const SizedBox(height: 24),
                   const LoginSectionIcons(),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+                  SizedBox(height: media * 0.05),
                   LoginDontHaveAccount(
                     SacTxt: 'Already have an account? ',
                     TxtButton: 'Log In',

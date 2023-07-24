@@ -21,6 +21,7 @@ class LogInScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var media = MediaQuery.of(context).size.height;
     return Scaffold(
       body: GestureDetector(
         onTap: () {
@@ -41,7 +42,7 @@ class LogInScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.15),
+                  SizedBox(height: media * 0.15),
                   const LogoInLogin(),
                   const SizedBox(height: 38),
                   const TxtLogin(),
@@ -83,7 +84,7 @@ class LogInScreen extends StatelessWidget {
                   const SectionOR(),
                   const SizedBox(height: 33),
                   const LoginSectionIcons(),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+                  SizedBox(height: media * 0.1),
                   LoginDontHaveAccount(
                     SacTxt: 'Don’t have an account?',
                     TxtButton: 'Sign Up',

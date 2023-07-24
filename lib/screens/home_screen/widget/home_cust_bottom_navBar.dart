@@ -1,3 +1,4 @@
+import 'package:codes/shared/CustomeSvg.dart';
 import 'package:codes/util/constant.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +35,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: <Widget>[
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     widget.selectedIndex == 0
                         ? Material(
@@ -52,21 +54,24 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                             width: 13,
                             height: 6,
                           ),
-                    IconButton(
-                      onPressed: () {
+                    InkWell(
+                      onTap: () {
                         widget.onItemTapped(0);
                       },
-                      icon: Icon(
-                        Icons.home_outlined,
-                        size: 28,
+                      child: CustomSvgAssets(
+                        height: 30,
+                        width: 30,
+                        path: 'assets/icons/home.svg',
                         color: widget.selectedIndex == 0
                             ? const Color(primeColorInApp)
                             : Colors.grey.shade400,
                       ),
-                    )
+                    ),
+                    SizedBox(height: 5),
                   ],
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     widget.selectedIndex == 1
                         ? Material(
@@ -86,19 +91,24 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                             width: 13,
                             height: 6,
                           ),
-                    IconButton(
-                        onPressed: () {
-                          widget.onItemTapped(1);
-                        },
-                        icon: Icon(
-                          Icons.shopping_cart_outlined,
-                          color: widget.selectedIndex == 1
-                              ? const Color(primeColorInApp)
-                              : Colors.grey.shade400,
-                        ))
+                    InkWell(
+                      onTap: () {
+                        widget.onItemTapped(1);
+                      },
+                      child: CustomSvgAssets(
+                        height: 30,
+                        width: 30,
+                        path: 'assets/icons/buy.svg',
+                        color: widget.selectedIndex == 1
+                            ? const Color(primeColorInApp)
+                            : Colors.grey.shade400,
+                      ),
+                    ),
+                    SizedBox(height: 5),
                   ],
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     widget.selectedIndex == 2
                         ? Material(
@@ -118,19 +128,24 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                             width: 13,
                             height: 6,
                           ),
-                    IconButton(
-                        onPressed: () {
-                          widget.onItemTapped(2);
-                        },
-                        icon: Icon(
-                          Icons.favorite_border,
-                          color: widget.selectedIndex == 2
-                              ? const Color(primeColorInApp)
-                              : Colors.grey.shade400,
-                        ))
+                    InkWell(
+                      onTap: () {
+                        widget.onItemTapped(2);
+                      },
+                      child: CustomSvgAssets(
+                        height: 30,
+                        width: 30,
+                        path: 'assets/icons/heart.svg',
+                        color: widget.selectedIndex == 2
+                            ? const Color(primeColorInApp)
+                            : Colors.grey,
+                      ),
+                    ),
+                    SizedBox(height: 5),
                   ],
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     widget.selectedIndex == 3
                         ? Material(
@@ -150,17 +165,20 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
                             width: 13,
                             height: 6,
                           ),
-                    IconButton(
-                      icon: Icon(
-                        Icons.person,
-                        color: widget.selectedIndex == 3
-                            ? const Color(primeColorInApp)
-                            : Colors.grey.shade400,
-                      ),
-                      onPressed: () {
+                    InkWell(
+                      onTap: () {
                         widget.onItemTapped(3);
                       },
+                      child: CustomSvgAssets(
+                        height: 30,
+                        width: 30,
+                        path: 'assets/icons/profile.svg',
+                        color: widget.selectedIndex == 3
+                            ? const Color(primeColorInApp)
+                            : Colors.grey,
+                      ),
                     ),
+                    SizedBox(height: 5),
                   ],
                 ),
               ],
