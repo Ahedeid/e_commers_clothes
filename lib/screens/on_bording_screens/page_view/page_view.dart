@@ -1,3 +1,4 @@
+import 'package:codes/logic/localData/shared_pref.dart';
 import 'package:codes/model/p_models.dart';
 import 'package:codes/screens/on_bording_screens/page_view/widget/cus_appBar_onBording.dart';
 import 'package:codes/screens/on_bording_screens/page_view/widget/cust_button_onBording.dart';
@@ -24,6 +25,7 @@ class _MPageViewState extends State<MPageView> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    SharedPrefController().setShowOnce(true);
     _controller = PageController();
     _controller.addListener(() {
       setState(() {

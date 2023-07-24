@@ -1,10 +1,8 @@
 import 'package:codes/drawer/drawer_screen.dart';
+import 'package:codes/util/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
-
-import '../../../util/constant.dart';
-
 
 class HomeCustAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeCustAppBar({
@@ -19,7 +17,7 @@ class HomeCustAppBar extends StatelessWidget implements PreferredSizeWidget {
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
-        leading:  AppBarIconDrawer(
+        leading: AppBarIconDrawer(
           contet: context,
         ),
         title: const Row(
@@ -32,15 +30,18 @@ class HomeCustAppBar extends StatelessWidget implements PreferredSizeWidget {
             ),
             Text(
               '15/2 New Texas',
-              style:
-              TextStyle(fontSize: smallSize, color: Color(primeTxtColor)),
+              style: TextStyle(
+                fontSize: smallSize,
+                color: Color(primeTxtColor),
+              ),
             ),
           ],
         ),
         actions: [
           InkWell(
-              onTap: () {},
-              child: SvgPicture.asset('assets/icons/notification.svg')),
+            onTap: () {},
+            child: SvgPicture.asset('assets/icons/notification.svg'),
+          ),
         ],
       ),
     );
@@ -55,7 +56,8 @@ class AppBarIconDrawer extends StatefulWidget {
     required this.contet,
     Key? key,
   }) : super(key: key);
- BuildContext contet;
+  BuildContext contet;
+
   @override
   State<AppBarIconDrawer> createState() => _AppBarIconDrawerState();
 }
@@ -65,7 +67,8 @@ class _AppBarIconDrawerState extends State<AppBarIconDrawer> {
   Widget build(BuildContext context) {
     return InkWell(
         onTap: () {
-          debugPrint("This is null is open ${DrawerScreen.zoomDrawerController.stateNotifier}");
+          debugPrint(
+              "This is null is open ${DrawerScreen.zoomDrawerController.stateNotifier}");
           debugPrint("This is null is open ${ZoomDrawer.of(widget.contet)}");
           if (ZoomDrawer.of(widget.contet)!.isOpen()) {
             ZoomDrawer.of(widget.contet)!.close();
