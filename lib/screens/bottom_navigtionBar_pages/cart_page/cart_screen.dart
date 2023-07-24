@@ -20,7 +20,7 @@ class CartScreen extends StatelessWidget {
         title: 'My Orders',
       ),
       body: Padding(
-        padding: const EdgeInsets.only(left: 20, right: 19, top: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         child: ListView.builder(
             shrinkWrap: true,
             itemCount: 5,
@@ -30,7 +30,8 @@ class CartScreen extends StatelessWidget {
                 child: Card(
                   elevation: 0,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   child: MyOrdersContentCard(
                     myCartImages: myCartImages,
                     index: index,

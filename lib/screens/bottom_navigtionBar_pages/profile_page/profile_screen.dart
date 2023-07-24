@@ -5,8 +5,6 @@ import 'package:codes/util/constant.dart';
 import 'package:codes/util/constat_assets.dart';
 import 'package:flutter/material.dart';
 
-
-
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
 

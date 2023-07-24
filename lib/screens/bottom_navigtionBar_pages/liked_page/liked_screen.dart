@@ -1,18 +1,16 @@
+import 'package:codes/shared/secandappBar.dart';
+import 'package:codes/util/constant.dart';
+import 'package:codes/util/constat_assets.dart';
 import 'package:flutter/material.dart';
 
-import '../../../shared/secandappBar.dart';
-import '../../../util/constant.dart';
-import '../../../util/constat_assets.dart';
-
 class LikedScreen extends StatefulWidget {
+  const LikedScreen({Key? key}) : super(key: key);
 
-   const LikedScreen({Key? key}) : super(key: key);
   @override
   State<LikedScreen> createState() => _LikedScreenState();
 }
 
 class _LikedScreenState extends State<LikedScreen> {
-
   int isSelected = 0;
 
   List images = [
@@ -31,9 +29,11 @@ class _LikedScreenState extends State<LikedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       appBar:  SecandAppBar(title:'Favorite',),
+      appBar: SecandAppBar(
+        title: 'Favorite',
+      ),
       body: Padding(
-        padding: const EdgeInsets.only(top:25,right: 25,left: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: GridView.builder(
           shrinkWrap: true,
           itemCount: images.length,
@@ -48,6 +48,7 @@ class _LikedScreenState extends State<LikedScreen> {
                 Navigator.pushNamed(context, 'seeAll_det_screen');
               },
               child: Container(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15),
@@ -83,15 +84,15 @@ class _LikedScreenState extends State<LikedScreen> {
                                     child: IconButton(
                                       icon: isSelected == index
                                           ? const Icon(
-                                        Icons.favorite,
-                                        size: 15,
-                                        color: Color(primeColorInApp),
-                                      )
+                                              Icons.favorite,
+                                              size: 15,
+                                              color: Color(primeColorInApp),
+                                            )
                                           : const Icon(
-                                        Icons.favorite_border,
-                                        size: 15,
-                                        color: Color(primeColorInApp),
-                                      ),
+                                              Icons.favorite_border,
+                                              size: 15,
+                                              color: Color(primeColorInApp),
+                                            ),
                                       onPressed: () {
                                         _onSelected(index);
                                       },
@@ -106,10 +107,11 @@ class _LikedScreenState extends State<LikedScreen> {
                       const Text(
                         'Long Sleeve Shirts',
                       ),
+                      const SizedBox(height: 5),
                       const Text(
                         '\$100',
-                        style:
-                        TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 12, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 5),
                     ],
@@ -118,7 +120,6 @@ class _LikedScreenState extends State<LikedScreen> {
           },
         ),
       ),
-
     );
   }
 
@@ -128,4 +129,3 @@ class _LikedScreenState extends State<LikedScreen> {
     });
   }
 }
-
