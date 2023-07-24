@@ -84,13 +84,17 @@ class _MenuScreenState extends State<MenuScreen> {
             DrawerListTile(
               image: Info,
               txt: 'About us',
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, 'aboutUs_screen');
+              },
             ),
             const SizedBox(height: 8),
             DrawerListTile(
               image: locka,
               txt: 'Privacy policy',
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, 'privacy_screen');
+              },
             ),
             const SizedBox(height: 8),
             DrawerListTile(

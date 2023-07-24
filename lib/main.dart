@@ -6,6 +6,8 @@ import 'package:codes/screens/bottom_navigtionBar_pages/home_page/home_seeAll_se
 import 'package:codes/screens/bottom_navigtionBar_pages/home_page/home_seeAll_section_B/seeAll_det_scrren/see_all_det_screen.dart';
 import 'package:codes/screens/home_screen/home_screen.dart';
 import 'package:codes/screens/launch_screens/launch_screen.dart';
+import 'package:codes/screens/profile/PrivacyScreen.dart';
+import 'package:codes/screens/profile/aboutUsScreen.dart';
 import 'package:codes/screens/registration/login_Screen/Login_screen.dart';
 import 'package:codes/screens/registration/signup_screen/signup_screen.dart';
 import 'package:codes/screens/settings/setting_screen.dart';
@@ -46,6 +48,8 @@ class ClothesECommerce extends StatelessWidget {
         'payment_screen': (context) => const PaymentScreen(),
         'setting_screen': (context) => const SettingScreen(),
         'drawer_screen': (context) => const DrawerScreen(),
+        'privacy_screen': (context) => const PrivacyScreen(),
+        'aboutUs_screen': (context) => const AboutUsScreen(),
       },
     );
   }

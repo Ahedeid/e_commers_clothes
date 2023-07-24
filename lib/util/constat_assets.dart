@@ -6,7 +6,7 @@ const String logo = 'assets/images/vector.svg';
 
 
 // Icons in App
-const String message = 'assets/icons/message.svg';
+const String message = 'assets/icons/email.svg';
 const String lock = 'assets/icons/lock.svg';
 const String facebook = 'assets/icons/facebook.svg';
 const String google = 'assets/icons/google.svg';
